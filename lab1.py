@@ -3,12 +3,9 @@ from collections import OrderedDict
 
 
 def find_letter_pos(matrix, letter):
-    wyn = {}
     for i in matrix:
         for j in i:
             if j == letter:
-                wyn['row'] = matrix.index(i)
-                wyn['col'] = i.index(j)
                 return matrix.index(i), i.index(j)
 
 

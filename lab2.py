@@ -18,23 +18,23 @@ print(key)
 print(f'Number of 1 in key - {key.count("1")}')
 print(f'Number of 0 in key - {key.count("0")}')
 
-for min_length in range(3, 29):
+for min_length in range(2, 29):
     current_char = '1'
-    subseq_length = 1
+    subseq_length = 0
     subseq_count = 0
 
     for i in range(1, len(key)):
         if key[i] == current_char:
             subseq_length += 1
         else:
-            if subseq_length >= min_length:
+            if subseq_length > min_length:
                 subseq_count += 1
             subseq_length = 1
 
     if subseq_length >= min_length:
         subseq_count += 1
 
-    print(f"Minimum length {min_length - 2}: {subseq_count}")
+    print(f"Minimum length {min_length}: {subseq_count}")
 
 splitted = [key[i:i + 4] for i in range(0, 5000 * 4, 4)]
 
