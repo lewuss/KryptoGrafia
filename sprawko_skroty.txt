@@ -1,0 +1,26 @@
+Dlugość ciągu : 5000000
+MD5: 7dc62a41272c4491c6bb5bf5559f5529. Done in 0.00913095474243164
+SHA1: a779bae4cc87a1594972dc93843dfb4f2aaffecd. Done in 0.007061958312988281
+SHA256: 4e83c4ea92d7416ab36c4c0962c62597b42f7af22cfa9747a51f61f43ff8b1d6. Done in 0.012970209121704102
+SHA3_512: 920a5d24eece9a538f8256c22caa7c90220b0e46ea7901b0aad8cf6a56b51670d19bf7300eecad0e0dcb2b24747de67863d3ad544f94fe937d3de4f8862636da. Done in 0.0273287296295166
+
+Dlugość ciągu : 500000000
+MD5: 238ca171a6c434c044ee7ebd4fe80f73. Done in 1.0741267204284668
+SHA1: 1281d24cf527ec17f7ad1d0f8a99941168ae65c1. Done in 0.7910070419311523
+SHA256: 6b3819616d4d32efb6f22d0cd55df4f8ba9607c8e87592b7f1a06e1a0a669c7f. Done in 1.3765175342559814
+SHA3_512: b4a31ef5eba5f1a620eded6bca88175ed6c88807cdcaf87d0154048cf8005c81a7fcf2ba68b9ae02409dc573051218e4f70969de23f6aaf4843ad008e97a756d. Done in 3.012845993041992
+
+zad3
+MD5: 7957915e0880664b4ec064ab428a3596
+
+Skróty MD5 dla krótkich haseł mogą być łatwiejsze do złamania, szczególnie gdy są oparte na powszechnie znanych wartościach. Krótkie hasła oznaczają mniej kombinacji, co sprawia, że są bardziej podatne na ataki brutalnej siły. Dlatego skróty MD5 dla krótkich haseł przechowywane w bazach danych nie są idealne pod względem bezpieczeństwa.
+
+Funkcja MD5 nie jest już uważana za bezpieczną. Zostały znalezione różne techniki ataków na MD5, takie jak kolizje czy ataki na preimage. W wyniku tych odkryć, eksperci zalecają stosowanie bardziej bezpiecznych funkcji skrótu, takich jak SHA-256 lub SHA-3, które są odporniejsze na ataki i mają dłuższe skróty.
+
+
+
+
+
+
+
+
