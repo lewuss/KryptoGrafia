@@ -5,21 +5,39 @@ from PIL import Image
 def generate_shares(image_path):
     image = Image.open(image_path).convert('1')
     width, height = image.size
-
-    share1 = Image.new('1', (width, height))
-    share2 = Image.new('1', (width, height))
+    width = width
+    share1 = Image.new('1', (width * 2, height))
+    share2 = Image.new('1', (width * 2, height))
 
     for x in range(width):
         for y in range(height):
             pixel = image.getpixel((x, y))
-            random_bit = random.randint(0, 1)
+            if pixel:
+                if random.randint(0, 1):
+                    share1.putpixel((2 * x, y), 1)
+                    share1.putpixel((2 * x + 1, y), 0)
 
-            if not random_bit:
-                share1.putpixel((x, y), random_bit)
-                share2.putpixel((x, y), random_bit ^ pixel)
+                    share2.putpixel((2 * x, y), 0)
+                    share2.putpixel((2 * x + 1, y), 1)
+                else:
+                    share1.putpixel((2 * x, y), 0)
+                    share1.putpixel((2 * x + 1, y), 1)
+
+                    share2.putpixel((2 * x, y), 1)
+                    share2.putpixel((2 * x + 1, y), 0)
             else:
-                share2.putpixel((x, y), random_bit)
-                share1.putpixel((x, y), random_bit ^ pixel)
+                if random.randint(0, 1):
+                    share1.putpixel((2 * x, y), 1)
+                    share1.putpixel((2 * x + 1, y), 0)
+
+                    share2.putpixel((2 * x, y), 1)
+                    share2.putpixel((2 * x + 1, y), 0)
+                else:
+                    share1.putpixel((2 * x, y), 0)
+                    share1.putpixel((2 * x + 1, y), 1)
+
+                    share2.putpixel((2 * x, y), 0)
+                    share2.putpixel((2 * x + 1, y), 1)
 
     return share1, share2
 
